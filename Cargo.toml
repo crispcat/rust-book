@@ -1,0 +1,28 @@
+[package]
+name = "rust_book_en4i"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+libmath = "0.2.1"
+
+[[bin]]
+name = "hello_world"
+path = "src/01_hello_world/main.rs"
+
+[[bin]]
+name = "guessing_game"
+path = "src/02_guessing_game/main.rs"
+
+[[bin]]
+name = "temperature"
+path = "src/03_temperature/main.rs"
+
+[[bin]]
+name = "fibonacci"
+path = "src/04_fibonacci/main.rs"
+
+[[bin]]
+name = "christmas"
+path = "src/05_christmas/main.rs"
