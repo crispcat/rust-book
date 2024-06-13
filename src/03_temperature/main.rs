@@ -20,7 +20,7 @@ impl Temperature {
 
         match self.deg {
             Degree::Celsius => match deg {
-                Degree::Celsius => *self,
+                Degree::Celsius => self.clone(),
                 Degree::Fahrenheit => Temperature { deg: Degree::Fahrenheit, val: self.val * 1.8 + 32. },
                 Degree::Kelvin => Temperature { deg: Degree::Kelvin, val: self.val + 273.15 }
             },

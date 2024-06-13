@@ -30,7 +30,7 @@ const GIFTS: [&str; 12] = [
 
 const FIRST_GIFT: &str = "A partridge in a pear tree.\n";
 
-macro_rules! format {
+macro_rules! song_format {
     () => {
         "On the {0} day of Christmas,\n\
          my true love gave to me\n\
@@ -41,11 +41,11 @@ macro_rules! format {
 fn main() {
 
     println!("Let me sing!\n");
-    println!(format!(), DAYS[0], FIRST_GIFT);
+    println!(song_format!(), DAYS[0], FIRST_GIFT);
     for day in 1..11 {
-        println!(format!(), DAYS[day], get_gifts(day) + ".\n");
+        println!(song_format!(), DAYS[day], get_gifts(day) + ".\n");
     }
-    println!(format!(), DAYS[11], get_gifts(11) + "!\n");
+    println!(song_format!(), DAYS[11], get_gifts(11) + "!\n");
 }
 
 fn get_gifts(day: usize) -> String {
