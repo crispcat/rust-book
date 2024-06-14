@@ -21,7 +21,7 @@ impl Rect {
         self.width <= other.width && self.height <= other.height
     }
 
-    fn rotate_90(&self) -> Rect {
+    fn transpose(&self) -> Rect {
         Rect { width: self.height, height: self.width }
     }
 }
@@ -50,8 +50,8 @@ fn print_rects_comparison(r1: &Rect, r2: &Rect) {
     println!("\n");
     if r1.fits_in(&r2) {
         println!("Rect {} fits in rect {}", r1, r2);
-    } else if r1.rotate_90().fits_in(&r2) {
-        println!("Rotated rect {} fits in rect {}", r1.rotate_90(), r2);
+    } else if r1.transpose().fits_in(&r2) {
+        println!("Transposed rect {} fits in rect {}", r1.transpose(), r2);
     } else {
         println!("Rect {} cannot fit in rect {}", r1, r2);
     }
