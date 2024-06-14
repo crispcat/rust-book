@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 rand = "0.8.5"
 libmath = "0.2.1"
+itertools = "0.13.0"
 
 [[bin]]
 name = "hello_world"
@@ -26,3 +27,7 @@ path = "src/04_fibonacci/main.rs"
 [[bin]]
 name = "christmas"
 path = "src/05_christmas/main.rs"
+
+[[bin]]
+name = "rects"
+path = "src/06_rects/main.rs"

@@ -36,6 +36,7 @@ impl Temperature {
     }
 
     fn to_string(&self) -> String {
+
         let prefix = match self.deg {
             Degree::Celsius     =>  "Celsius    : ",
             Degree::Fahrenheit  =>  "Fahrenheit : ",

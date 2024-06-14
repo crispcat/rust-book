@@ -1,4 +1,6 @@
-const DAYS: [&str; 12] = [
+const VERSES: usize = 12;
+
+const DAYS: [&str; VERSES] = [
     "first",
     "second",
     "third",
@@ -13,7 +15,7 @@ const DAYS: [&str; 12] = [
     "twelfth"
 ];
 
-const GIFTS: [&str; 12] = [
+const GIFTS: [&str; VERSES] = [
     "And a partridge in a pear tree",
     "Two turtle doves",
     "Three French hens",
@@ -42,7 +44,7 @@ fn main() {
 
     println!("Let me sing!\n");
     println!(song_format!(), DAYS[0], FIRST_GIFT);
-    for day in 1..11 {
+    for day in 1..VERSES-1 {
         println!(song_format!(), DAYS[day], get_gifts(day) + ".\n");
     }
     println!(song_format!(), DAYS[11], get_gifts(11) + "!\n");
