@@ -42,7 +42,7 @@ fn main() {
 
     rects.iter()
         .permutations(2)
-        .for_each(|p| { print_rects_comparison(p[0], p[1]) });
+        .for_each(|p| print_rects_comparison(p[0], p[1]));
 }
 
 fn print_rects_comparison(r1: &Rect, r2: &Rect) {

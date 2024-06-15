@@ -1,5 +1,3 @@
-use std::io;
-
 fn main() {
 
     println!("\nHi! I can tell you n-th fibonacci number.\n");
@@ -9,7 +7,7 @@ fn main() {
         println!("And n is:\n");
 
         let n: u8 = loop {
-            match stdin_read_line().trim().parse() {
+            match utils::stdin_read_line().trim().parse() {
                 Ok(f) => match f {
                     // check possible overflow
                     0..=93 => break f,
@@ -36,10 +34,4 @@ fn nth_fibonacci(n: u8) -> u64 {
     }
 
     a3
-}
-
-fn stdin_read_line() -> String {
-    let mut line = String::new();
-    io::stdin().read_line(&mut line).expect("Failed to read stdin");
-    line
 }

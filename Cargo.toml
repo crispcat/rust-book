@@ -8,6 +8,10 @@ rand = "0.8.5"
 libmath = "0.2.1"
 itertools = "0.13.0"
 
+[lib]
+name = "utils"
+path = "src/utils/utils.rs"
+
 [[bin]]
 name = "hello_world"
 path = "src/01_hello_world/main.rs"
@@ -31,3 +35,7 @@ path = "src/05_christmas/main.rs"
 [[bin]]
 name = "rects"
 path = "src/06_rects/main.rs"
+
+[[bin]]
+name = "modules"
+path = "src/07_modules/main.rs"
